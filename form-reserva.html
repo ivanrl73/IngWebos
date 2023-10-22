@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Reserva</title>
+    <link rel="stylesheet" href="styles-form.css" />
+  </head>
+  <body>
+    <h2 class="title">Formulario de Reserva</h2>
+    <section class="container">
+      <form action="/action_page.php">
+        <!-- Cambiar el action cuando pasemos a PHP / Backend -->
+        <!-- Container de Nombre -->
+        <div class="row">
+          <div class="col-25">
+            <label for="fname">Nombre</label>
+          </div>
+          <div class="col-75">
+            <input
+              type="text"
+              id="fname"
+              name="firstname"
+              placeholder="Escriba el Nombre"
+            />
+          </div>
+        </div>
+        <!-- Container de Apellido -->
+        <div class="row">
+          <div class="col-25">
+            <label for="lname">Apellido</label>
+          </div>
+          <div class="col-75">
+            <input
+              type="text"
+              id="lname"
+              name="lastname"
+              placeholder="Escriba el Apellido"
+            />
+          </div>
+        </div>
+        <!-- Container de Correo -->
+        <div class="row">
+          <div class="col-25">
+            <label for="email">Correo Electronico</label>
+          </div>
+          <div class="col-75">
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Escriba el Correo Electronico"
+            />
+          </div>
+        </div>
+        <!-- Container de Nombre de Restaurante -->
+        <div class="row">
+          <div class="col-25">
+            <label for="restname">Nombre de Restaurante</label>
+          </div>
+          <div class="col-75">
+            <input
+              type="text"
+              id="restname"
+              name="restname"
+              placeholder="Escriba el Nombre de Restaurante"
+            />
+          </div>
+        </div>
+        <!-- Container de Personas en la Reserva -->
+        <div class="row">
+          <div class="col-25">
+            <label for="personas">Para cuantas personas es a reserva?</label>
+          </div>
+          <div class="col-75">
+            <select id="personas" name="personas">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Container de Fecha -->
+        <div class="row">
+          <div class="col-25">
+            <label for="fecha">Fecha de Reserva</label>
+          </div>
+          <div class="col-75">
+            <input type="date" id="fecha" name="fecha" />
+          </div>
+        </div>
+
+        <!-- Container de Hora -->
+        <div class="row">
+          <div class="col-25">
+            <label for="hora">Hora de Reserva</label>
+          </div>
+          <div class="col-75">
+            <input type="time" id="hora" name="hora" />
+          </div>
+        </div>
+        <!-- Boton de Envio -->
+        <div class="row button">
+          <input type="submit" value="Confirmar Reserva" />
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
