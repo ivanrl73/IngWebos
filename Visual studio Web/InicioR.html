@@ -4,149 +4,312 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pagina Web Restaurante</title>
-    <link rel="stylesheet" href="InicioR.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="InicioR.css" />
   </head>
 
-  <header class="nav-margin">
-    <div class="fixed-top">
-      <div class="collapse" id="navbarToggleExternalContent">
-        <div class="bg-dark p-4">
-          <h5 class="text-white h4">Menu Principal</h5>
-          <a class="nav-link text-warning" href="#">Menus</a>
-          <a class="nav-link text-warning" href="#">Buscar Restaurantes</a>
-          <a class="nav-link text-warning" href="#">Eventos Especiales</a>
-          <a class="nav-link text-warning" href="form-reserva.html">Reservas</a>
-          <a class="nav-link text-warning" href="#">Blogs y Noticias</a>
-        </div>
-      </div>
-      <nav class="navbar navbar-dark" style="background-color: #e75300">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarToggleExternalContent"
-          aria-controls="navbarToggleExternalContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div>
-          <button type="button" class="btn btn-outline-light">
-            <a class="link" href="#">Iniciar Sesion</a>
-          </button>
-          <button type="button" class="btn btn-outline-light">
-            <a class="link" href="registro.html">Registrarse</a>
-          </button>
-        </div>
-      </nav>
-    </div>
-  </header>
-
   <body class="back">
-    <div>
-      <div>
-        <div class="Rectangle1"></div>
-        <div class="Rectangle2">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6626.486612209095!2d-79.45064172683142!3d9.051675394774625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fab55ec6df53ed1%3A0xdeedfb5daabbe844!2sMetromall%20Panam%C3%A1!5e0!3m2!1ses-419!2spa!4v1698014720546!5m2!1ses-419!2spa"
-            width="1255.6"
-            height="460.4"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
+    <header class="nav-margin">
+      <div class="fixed-top">
+        <!-- ... (código de la barra de navegación) ... -->
+        <nav class="navbar navbar-dark navbar fixed-top">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasDarkNavbar"
+              aria-controls="offcanvasDarkNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">FoodFast</a>
+            <div
+              class="offcanvas offcanvas-start text-bg-dark"
+              tabindex="-1"
+              id="offcanvasDarkNavbar"
+              aria-labelledby="offcanvasDarkNavbarLabel"
+            >
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+                  Dark offcanvas
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close btn-close-white"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"
+                      >Inicio</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Busqueda</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Restaurantes
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item" href="#">Reservas</a></li>
+                      <li><a class="dropdown-item" href="#">Cancelacion</a></li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="d-flex mt-3" role="search">
+                  <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button class="btn btn-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
       </div>
-    </div>
+    </header>
 
-    
-    <div class="card-columns Rectangle3 ">
-      <div class="card">
-        <img src="Img/rest1.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Restaurante 1</h5>
-          <p class="card-text">Exelente servicio, menu que dejan ganas de comprar y sus bebidas a otro nivel, pero el baño deja que desear desafortunadamente.</p>
+    <section>
+      <section class="section intro-section">
+        <div class="container">
+          <h2 class="text-center">Bienvenido a Nuestro Sitio</h2>
+          <p class="lead text-center">
+            Descubre los mejores restaurantes y disfruta de experiencias
+            culinarias únicas.
+          </p>
+        </div>
+      </section>
+
+      <section class="section featured-restaurants">
+        <div class="container">
+          <h2 class="text-center2">Restaurantes Destacados</h2>
+          <div
+            id="carouselExampleAutoplaying"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="Img/large1.jpeg"
+                  class="d-block w-100 h-100"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="Img/large2.jpeg"
+                  class="d-block w-100 h-100"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="Img/large3.jpeg"
+                  class="d-block w-100 h-100"
+                  alt="..."
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Categorias -->
+      <div class="section flex1">
+        <p class="text-center3">Categorias</p>
+        <div class="flex1">
+        <div class="book Rectangle3 book-background1 flex2">
+          <button class="btn"> Shop now
+          </button>
+            <p>Desayuno</p>
+            <div class="cover book-background2 flex2">
+                <p>Desayuno</p>
+                <script src="https://cdn.lordicon.com/lordicon.js"></script>
+              <lord-icon
+                  src="https://cdn.lordicon.com/rztizmkk.json"
+                  trigger="hover"
+                  style="width:150px;height:150px">
+              </lord-icon>
+            </div>
+        </div>
+        <div class="book Rectangle3 book-background1 flex2">
+          <button class="btn"> Shop now
+          </button>
+            <p>Almuerzo</p>
+            <div class="cover book-background2 flex2">
+                <p>Almuerzo</p>
+                <script src="https://cdn.lordicon.com/lordicon.js"></script>
+              <lord-icon
+                  src="https://cdn.lordicon.com/yeoppmgu.json"
+                  trigger="hover"
+                  stroke="bold"
+                  style="width:150px;height:150px">
+              </lord-icon>
+            </div>
+        </div>
+        <div class="book Rectangle3 book-background1 flex2">
+          <button class="btn"> Shop now
+          </button>
+            <p>Cena</p>
+            <div class="cover book-background2 flex2">
+                <p>Cena</p>
+                <script src="https://cdn.lordicon.com/lordicon.js"></script>
+              <lord-icon
+                  src="https://cdn.lordicon.com/lqvpygov.json"
+                  trigger="hover"
+                  style="width:150px;height:150px">
+              </lord-icon>
+            </div>
+        </div>
+        <div class="book Rectangle3 book-background1 flex2">
+          <button class="btn"> Shop now
+          </button>
+            <p>Ofertas</p>
+            <div class="cover book-background2 flex2">
+                <p>Ofertas</p>
+                <script src="https://cdn.lordicon.com/lordicon.js"></script>
+              <lord-icon
+                  src="https://cdn.lordicon.com/jhxhrsfe.json"
+                  trigger="hover"
+                  style="width:150px;height:150px">
+              </lord-icon>
+            </div>
+        </div>
+        <div class="book Rectangle3 book-background1 flex2">
+          <button class="btn"> Shop now
+          </button>
+            <p>Bebidas</p>
+            <div class="cover book-background2 flex2">
+                <p>Bebidas</p>
+                <script src="https://cdn.lordicon.com/lordicon.js"></script>
+              <lord-icon
+                  src="https://cdn.lordicon.com/tckirjgy.json"
+                  trigger="hover"
+                  style="width:150px;height:150px">
+              </lord-icon>
+            </div>
+        </div>
+        <div class="book Rectangle3 book-background1 flex2">
+          <button class="btn"> Shop now
+          </button>
+            <p>Bar</p>
+            <div class="cover book-background2 flex2">
+                <p>Bar</p>
+                <script src="https://cdn.lordicon.com/lordicon.js"></script>
+              <lord-icon
+                  src="https://cdn.lordicon.com/dvjujnbv.json"
+                  trigger="hover"
+                  colors="primary:#121331,secondary:#ebe6ef,tertiary:#eeca66,quaternary:#ffc738"
+                  style="width:150px;height:150px">
+              </lord-icon>
+            </div>
+        </div>
+           <div class="book Rectangle3 book-background1 flex2">
+            <button class="btn"> Shop now
+          </button>
+            <p>Ranking</p>
+            <div class="cover book-background2 flex2">
+                <p>Ranking</p>
+                <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                <lord-icon
+                    src="https://cdn.lordicon.com/eodavnff.json"
+                    trigger="hover"
+                    style="width:150px;height:150px">
+                </lord-icon>
+            </div>
+        </div>
+           <div class="book Rectangle3 book-background1 flex2">
+            <button class="btn"> Shop now
+          </button>
+            <p>Pasteleria</p>
+            <div class="cover book-background2 flex2">
+                <p>Pasteleria</p>
+                <script src="https://cdn.lordicon.com/lordicon.js"></script>
+              <lord-icon
+                  src="https://cdn.lordicon.com/joucdxcj.json"
+                  trigger="hover"
+                  style="width:150px;height:150px">
+              </lord-icon>
+            </div>
         </div>
       </div>
-      <div class="card p-3">
-        <blockquote class="blockquote mb-0 card-body">
-          <p>Colon con sabores que no te permiten olvidar... .</p>
-          <footer class="blockquote-footer">
-            <small class="text-muted">
-              dilsa canbridge <cite title="Source Title">Revista DailyKitchen</cite>
-            </small>
-          </footer>
-        </blockquote>
       </div>
-      <div class="card">
-        <img src="Img/rest2.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Restaurante 2</h5>
-          <p class="card-text">Gustos moderados para el menu, le doy un 7.5/10.</p>
-          <p class="card-text"><small class="text-muted">Hace 14 minutos</small></p>
-        </div>
-      </div>
-      <div class="card bg-danger text-white text-center p-3 bg-warning">
-        <blockquote class="blockquote mb-0">
-          <p>El riesgo es nunca haberlo probado!!.</p>
-          <footer class="blockquote-footer text-white">
-            <small>
-              Maritsa maluca <cite title="Source Title">Revista gastronimica</cite>
-            </small>
-          </footer>
-        </blockquote>
-      </div>
-      <div class="card text-center">
-        <div class="card-body">
-          <h5 class="card-title">Restaurante 3</h5>
-          <p class="card-text">Me encantaria repetir, aunque tenga larga fila.</p>
-          <p class="card-text"><small class="text-muted">Hace 3 minutos</small></p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="Img/rest3.png" class="card-img" alt="...">
-      </div>
-      <div class="card p-3 text-right">
-        <blockquote class="blockquote mb-0">
-          <p>Exelente Restaurante, buen ambiente y exelente servicio.</p>
-          <footer class="blockquote-footer">
-            <small class="text-muted">
-              Someone famous in <cite title="Source Title">Source Title</cite>
-            </small>
-          </footer>
-        </blockquote>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Servicio</h5>
-          <p class="card-text">La app me facilita todo, buenos lugares recomendados y reseñas confiables!!.</p>
-          <p class="card-text"><small class="text-muted">Hace 5 horas</small></p>
-        </div>
-      </div>
-    </div>
+    </section>
+  </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
   </body>
-
-  <script
-    src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
-    integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
-    crossorigin="anonymous"
-  ></script>
 </html>
