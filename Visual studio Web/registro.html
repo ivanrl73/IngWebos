@@ -9,25 +9,7 @@
 <body>
     <div class="container">
         <h2>Registro</h2>
-        <?php
-        // Verificar si se ha enviado el formulario
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            // Obtener los datos del formulario
-            $nombre = $_POST["nombre"];
-            $email = $_POST["email"];
-            $password = $_POST["password"];
-            $confirmPassword = $_POST["confirm-password"];
-
-            // Validar y procesar los datos como sea necesario
-            // Aquí puedes realizar operaciones con los datos, por ejemplo, almacenarlos en una base de datos.
-
-            // Ejemplo simple: mostrar los datos ingresados
-            echo "<p>Nombre: $nombre</p>";
-            echo "<p>Correo Electrónico: $email</p>";
-            echo "<p>Contraseña: $password</p>";
-        }
-        ?>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+        <form action="#" method="post">
             <div class="form-group">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
