@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Lenovo\\MvcFramework\\' => array($baseDir . '/src'),
+    'MVC\\' => array($baseDir . '/src'),
 );

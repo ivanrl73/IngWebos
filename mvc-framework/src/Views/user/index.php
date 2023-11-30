@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>User List</title>
-</head>
-<body>
-    <h1>User List</h1>
+<?php if (isset($users) && is_array($users)): ?>
     <ul>
         <?php foreach ($users as $user): ?>
-            <li><?= $user->name ?> (<?= $user->email ?>)</li>
+            <li><?= $user->name ?> - <?= $user->email ?></li>
         <?php endforeach; ?>
     </ul>
-</body>
-</html>
+<?php else: ?>
+    <p>No users available.</p>
+<?php endif; ?>
+
+    
     
