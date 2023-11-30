@@ -1,6 +1,8 @@
 <?php
 
 require 'vendor/autoload.php';
+require_once 'src/Controllers/UserController.php';
+
 use MVC\Router;
 
 

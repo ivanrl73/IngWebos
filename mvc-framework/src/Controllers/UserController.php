@@ -15,5 +15,4 @@ class UserController extends Controller {
         $this->render('user/index', ['users' => $users]);
     }
 }
-    
-    
+
