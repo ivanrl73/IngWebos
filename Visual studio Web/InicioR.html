@@ -23,7 +23,7 @@
     <header class="nav-margin">
       <div class="fixed-top">
         <!-- ... (código de la barra de navegación) ... -->
-        <nav class="navbar navbar-dark navbar fixed-top">
+        <nav class="navbar navbar-dark navbar sticky-top">
           <div class="container-fluid">
             <button
               class="navbar-toggler"
@@ -35,16 +35,28 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="#">FoodFast</a>
+            <a class="navbar-brand" href="registro.html">
+              <button class="button2">
+                Registrarse
+            </button>
+              <button class="button2">
+                Inicia Sesion
+            </button>
+            <a class="navbar-brand" href="#">
+              <img src="Img/LogoFastFood2.png" alt="Bootstrap" width="40" height="40">
+              FastFood
+            </a>
             <div
               class="offcanvas offcanvas-start text-bg-dark"
               tabindex="-1"
               id="offcanvasDarkNavbar"
               aria-labelledby="offcanvasDarkNavbarLabel"
+              data-bs-scroll="true"
             >
               <div class="offcanvas-header">
+                <img src="Img/LogoFastFood2.png" alt="Bootstrap" width="150" height="150">
                 <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
-                  Dark offcanvas
+                  FastFood
                 </h5>
                 <button
                   type="button"
@@ -61,41 +73,20 @@
                     >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Busqueda</a>
+                    <a class="nav-link" href="#">Usuario</a>
                   </li>
-                  <li class="nav-item dropdown">
-                    <a
-                      class="nav-link dropdown-toggle"
-                      href="#"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Restaurantes
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a class="dropdown-item" href="#">Reservas</a></li>
-                      <li><a class="dropdown-item" href="#">Cancelacion</a></li>
-                      <li>
-                        <hr class="dropdown-divider" />
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#"
-                          >Something else here</a
-                        >
-                      </li>
-                    </ul>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Restaurantes</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="form-reserva.html">Reservas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Cancelacion</a>
+                  </li>
+
                 </ul>
-                <form class="d-flex mt-3" role="search">
-                  <input
-                    class="form-control me-2"
-                    type="search"
-                    placeholder="Search"
-                    aria-label="Search"
-                  />
-                  <button class="btn btn-success" type="submit">Search</button>
-                </form>
+                
               </div>
             </div>
           </div>
@@ -128,6 +119,7 @@
                   src="Img/large1.jpeg"
                   class="d-block w-100 h-100"
                   alt="..."
+                  href="#"
                 />
               </div>
               <div class="carousel-item">
@@ -135,6 +127,7 @@
                   src="Img/large2.jpeg"
                   class="d-block w-100 h-100"
                   alt="..."
+                  href="#"
                 />
               </div>
               <div class="carousel-item">
@@ -142,6 +135,7 @@
                   src="Img/large3.jpeg"
                   class="d-block w-100 h-100"
                   alt="..."
+                  href="#"
                 />
               </div>
             </div>
@@ -175,10 +169,12 @@
 
       <!-- Categorias -->
       <div class="section flex1">
-        <p class="text-center3">Categorias</p>
+        <button class="btn-hover">
+          Categorias
+      </button>
         <div class="flex1">
         <div class="book Rectangle3 book-background1 flex2">
-          <button class="btn"> Shop now
+          <button class="btn2"> Shop now
           </button>
             <p>Desayuno</p>
             <div class="cover book-background2 flex2">
@@ -192,7 +188,7 @@
             </div>
         </div>
         <div class="book Rectangle3 book-background1 flex2">
-          <button class="btn"> Shop now
+          <button class="btn2"> Shop now
           </button>
             <p>Almuerzo</p>
             <div class="cover book-background2 flex2">
@@ -207,7 +203,7 @@
             </div>
         </div>
         <div class="book Rectangle3 book-background1 flex2">
-          <button class="btn"> Shop now
+          <button class="btn2"> Shop now
           </button>
             <p>Cena</p>
             <div class="cover book-background2 flex2">
@@ -221,7 +217,7 @@
             </div>
         </div>
         <div class="book Rectangle3 book-background1 flex2">
-          <button class="btn"> Shop now
+          <button class="btn2"> Shop now
           </button>
             <p>Ofertas</p>
             <div class="cover book-background2 flex2">
@@ -235,7 +231,7 @@
             </div>
         </div>
         <div class="book Rectangle3 book-background1 flex2">
-          <button class="btn"> Shop now
+          <button class="btn2"> Shop now
           </button>
             <p>Bebidas</p>
             <div class="cover book-background2 flex2">
@@ -249,7 +245,7 @@
             </div>
         </div>
         <div class="book Rectangle3 book-background1 flex2">
-          <button class="btn"> Shop now
+          <button class="btn2"> Shop now
           </button>
             <p>Bar</p>
             <div class="cover book-background2 flex2">
@@ -264,7 +260,7 @@
             </div>
         </div>
            <div class="book Rectangle3 book-background1 flex2">
-            <button class="btn"> Shop now
+            <button class="btn2"> Shop now
           </button>
             <p>Ranking</p>
             <div class="cover book-background2 flex2">
@@ -278,7 +274,7 @@
             </div>
         </div>
            <div class="book Rectangle3 book-background1 flex2">
-            <button class="btn"> Shop now
+            <button class="btn2"> Shop now
           </button>
             <p>Pasteleria</p>
             <div class="cover book-background2 flex2">

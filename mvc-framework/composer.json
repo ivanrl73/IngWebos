@@ -1,0 +1,16 @@
+{
+    "name": "lenovo/mvc-framework",
+    "description": "web restaurante",
+    "autoload": {
+        "psr-4": {
+            "Lenovo\\MvcFramework\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Regino0026",
+            "email": "regino.cornejo1@utp.ac.pa"
+        }
+    ],
+    "require": {}
+}
