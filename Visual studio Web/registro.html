@@ -9,7 +9,28 @@
 <body>
     <div class="container">
         <h2>Registro</h2>
-        <form action="#" method="post">
+
+        <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            // Recibir datos del formulario
+            $nombre = $_POST["nombre"];
+            $email = $_POST["email"];
+            $password = $_POST["password"];
+            $confirmPassword = $_POST["confirm-password"];
+
+            // Puedes realizar validaciones y procesamiento de datos aquí
+            // Por ejemplo, verificar si las contraseñas coinciden
+
+            if ($password === $confirmPassword) {
+                // Las contraseñas coinciden, puedes realizar acciones adicionales
+                echo "<p>Registro exitoso. ¡Bienvenido, $nombre!</p>";
+            } else {
+                echo "<p>Error: Las contraseñas no coinciden. Intenta de nuevo.</p>";
+            }
+        }
+        ?>
+
+        <form action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF "]); ?>" method="post">
             <div class="form-group">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
