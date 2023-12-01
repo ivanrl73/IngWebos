@@ -16,7 +16,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="InicioR.css" />
+    <link rel="stylesheet" href="{{ asset('css/InicioR.css') }}" />
+
   </head>
 
   <body class="back">
