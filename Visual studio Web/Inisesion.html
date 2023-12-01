@@ -19,5 +19,25 @@
             <input type="submit" value="Iniciar Sesión">
         </form>
     </div>
+
+    <?php
+    // procesar_login.php
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Obtener los datos del formulario
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+
+        // Validar los datos (puedes implementar la lógica de validación aquí)
+
+        // Ejemplo simple de verificación (¡no uses esto en producción!)
+        if ($username === "usuario" && $password === "contraseña") {
+            echo "<p>Inicio de sesión exitoso. ¡Bienvenido, $username!</p>";
+        } else {
+            echo "<p>Inicio de sesión fallido. Verifica tus credenciales.</p>";
+        }
+    }
+    ?>
 </body>
 </html>
+
