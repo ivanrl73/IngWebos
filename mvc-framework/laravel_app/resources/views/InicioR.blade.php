@@ -4,19 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pagina Web Restaurante</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="{{ asset('css/InicioR.css') }}" />
+    <link rel="stylesheet" href="{{asset('InicioR.css') }}" />
 
   </head>
 
@@ -36,16 +32,16 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="registro.html">
+            <a class="navbar-brand" href="{{ asset('registro.php') }}">
               <button class="button2" >
                 Registrarse
             </button>
-            <a class="navbar-brand" href="Inisesion.html">
+            <a class="navbar-brand" href="{{asset('Inisesion.php')}}">
               <button class="button2">
                 Inicia Sesion
             </button>
             <a class="navbar-brand" href="#">
-              <img src="Img/LogoFastFood2.png" alt="Bootstrap" width="40" height="40">
+              <img src="{{asset('LogoFastFood2.png')}}" alt="" width="40" height="40">
               FastFood
             </a>
             <div
@@ -56,7 +52,7 @@
               data-bs-scroll="true"
             >
               <div class="offcanvas-header">
-                <img src="Img/LogoFastFood2.png" alt="Bootstrap" width="150" height="150">
+                <img src="{{asset('LogoFastFood2.png')}}" alt="Bootstrap" width="150" height="150">
                 <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
                   FastFood
                 </h5>
@@ -118,7 +114,7 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img
-                  src="Img/large1.jpeg"
+                  src="{{asset('Img/large1.jpeg')}}"
                   class="d-block w-100 h-100"
                   alt="..."
                   href="#"
@@ -126,7 +122,7 @@
               </div>
               <div class="carousel-item">
                 <img
-                  src="Img/large2.jpeg"
+                  src="{{asset('Img/large2.jpeg')}}"
                   class="d-block w-100 h-100"
                   alt="..."
                   href="#"
@@ -134,7 +130,7 @@
               </div>
               <div class="carousel-item">
                 <img
-                  src="Img/large3.jpeg"
+                  src="{{asset('Img/large3.jpeg')}}"
                   class="d-block w-100 h-100"
                   alt="..."
                   href="#"
@@ -299,6 +295,7 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
