@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostsController;
+use App\Http\Controllers\RegistroController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +18,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('InicioR');
 });
+
+//Posts endpoint
+Route::middleware(['web'])->group(function () {
+    Route::get('/posts', [PostsController::class, 'index']);
+    Route::post('/registrar', [RegistroController::class, 'registrarUsuario']);
+    Route::post('/registro', 'AuthController@registro');
+
+    Route::post('/registro', 'RegistroController@registrarUsuario');
+
+});
+
 
 
 

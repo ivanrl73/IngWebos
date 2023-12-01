@@ -9,8 +9,10 @@
 <body>
     <div class="container">
         <h2>Registro</h2>
-        <form action="#" method="post">
+        <form action="/registro" method="post">
+            
             <div class="form-group">
+                
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
             </div>
@@ -27,6 +29,7 @@
                 <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirmar Contraseña" required>
             </div>
             <input type="submit" value="Registrarse">
+            @csrf
         </form>
     </div>
 </body>
