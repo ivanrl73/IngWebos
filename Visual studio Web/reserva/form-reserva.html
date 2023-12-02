@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Reserva</title>
+    <link rel="stylesheet" href="styles-reserva.css" />
+  </head>
+  <body>
+    <h2 class="title">Formulario de Reserva</h2>
+    <section class="container">
+      <form>
+        <!-- Container de Nombre -->
+        <div class="row">
+          <div class="col-25">
+            <label for="nombre">Nombre</label>
+          </div>
+          <div class="col-75">
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Escriba el Nombre y Apellido"
+            />
+          </div>
+        </div>
+        <!-- Container de Correo -->
+        <div class="row">
+          <div class="col-25">
+            <label for="correo">Correo Electronico</label>
+          </div>
+          <div class="col-75">
+            <input
+              type="text"
+              id="correo"
+              name="correo"
+              placeholder="Escriba el Correo Electronico"
+            />
+          </div>
+        </div>
+        <!-- Container de Nombre de Restaurante -->
+        <div class="row">
+          <div class="col-25">
+            <label for="restname">Nombre del Restaurante</label>
+          </div>
+          <div class="col-75">
+            <input
+              type="text"
+              id="restname"
+              name="restname"
+              placeholder="Escriba el Nombre del Restaurante"
+            />
+          </div>
+        </div>
+        <!-- Container de Personas en la Reserva -->
+        <div class="row">
+          <div class="col-25">
+            <label for="personas">Para cuantas personas es la reserva?</label>
+          </div>
+          <div class="col-75">
+            <select id="personas" name="personas">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Container de Fecha -->
+        <div class="row">
+          <div class="col-25">
+            <label for="fecha">Fecha de Reserva</label>
+          </div>
+          <div class="col-75">
+            <input type="date" id="fecha" name="fecha" />
+          </div>
+        </div>
+
+        <!-- Container de Hora -->
+        <div class="row">
+          <div class="col-25">
+            <label for="hora">Hora de Reserva</label>
+          </div>
+          <div class="col-75">
+            <input type="time" id="hora" name="hora" />
+          </div>
+        </div>
+        <!-- Boton de Envio -->
+        <div class="row button">
+          <input type="submit" value="Confirmar Reserva" />
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
