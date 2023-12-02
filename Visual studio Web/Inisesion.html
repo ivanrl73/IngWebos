@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="inisesion.css">
-    <title>Iniciar Sesión</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulario de Inicio de Sesión</title>
+  <link rel="stylesheet" href="styles-inisesion.css" />
 </head>
 <body>
+<<<<<<< HEAD
     <div class="container">
         <h2>Iniciar Sesión</h2>
         <form action="procesar_login.php" method="post">
@@ -19,25 +20,45 @@
             <input type="submit" value="Iniciar Sesión">
         </form>
     </div>
-
-    <?php
-    // procesar_login.php
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Obtener los datos del formulario
-        $username = $_POST["username"];
-        $password = $_POST["password"];
-
-        // Validar los datos (puedes implementar la lógica de validación aquí)
-
-        // Ejemplo simple de verificación (¡no uses esto en producción!)
-        if ($username === "usuario" && $password === "contraseña") {
-            echo "<p>Inicio de sesión exitoso. ¡Bienvenido, $username!</p>";
-        } else {
-            echo "<p>Inicio de sesión fallido. Verifica tus credenciales.</p>";
-        }
-    }
-    ?>
+=======
+  <h2 class="title">Formulario de Inicio de Sesión</h2>
+  <section class="container">
+    <form action="procesar_login.php" method="post">
+      <!-- Container de Nombre -->
+      <div class="row">
+        <div class="col-25">
+          <label for="nombre">Nombre de Usuario</label>
+        </div>
+        <div class="col-75">
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Escriba el Nombre de Usuario"
+          />
+        </div>
+      </div>
+      <!-- Container de Contraseña -->
+      <div class="row">
+        <div class="col-25">
+          <label for="contrasena">Contraseña</label>
+        </div>
+        <div class="col-75">
+          <input
+            type="password"
+            id="contrasena"
+            name="contrasena"
+            placeholder="Escriba la Contraseña"
+          />
+        </div>
+      </div>
+      <!-- Botones -->
+      <div class="row button">
+          <input type="submit" value="Iniciar Sesión" />
+          <a href="index.html">Regresar a la Página de Inicio</a>
+      </div>
+    </form>
+  </section>
+>>>>>>> 8b40e6e8db3a6e982b9d1ec3e5748920d414595e
 </body>
 </html>
-

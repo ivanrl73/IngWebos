@@ -14,5 +14,10 @@ class AuthController extends Controller
     {
         // Lógica de registro aquí
     }
+
+    public function index()
+    {
+        return view('Inisesion');
+    }
 }
 

@@ -1,46 +1,77 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.container {
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-    padding: 20px;
-    width: 300px;
+body{
+    background-color: #f2f2f2;
+  }
+  
+  .title{
+    color: rgb(0, 0, 0);
     text-align: center;
-}
-
-h2 {
-    color: #333;
-}
-
-input[type="text"],
-input[type="password"] {
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-input[type="submit"] {
-    background: #007BFF;
-    color: #fff;
-    border: 0;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  /* Estilo de inputs, select y textareas */
+  input[type=text], select, textarea{
     width: 100%;
-}
-
-input[type="submit"]:hover {
-    background: #0056b3;
-}
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+  
+  input[type=password]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo para lable al lado de las inputs */
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  /* Estilos del boton de confirmacion */
+  input[type=submit] {
+    background-color: #9d3940;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  .container {
+    border-radius: 5px;
+    padding: 20px;
+  }
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .button{
+    padding-top: 30px;
+  }
+  /* Responsive layout - Pantalla mas pequena que 700px, se juntan las columnas colocandose una arriba de a otra */
+  @media screen and (max-width: 700px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }

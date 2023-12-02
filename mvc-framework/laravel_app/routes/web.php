@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\RegistroController;
-
+use App\Http\Controllers\AuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +22,15 @@ Route::get('/registro', function () {
     return view('registro');
 });
 
+Route::get('/Inisesion', function () {
+    return view('Inisesion');
+});
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+
 //Posts endpoint
 Route::middleware(['web'])->group(function () {
    Route::get('/registro', [RegistroController::class, 'index'])->name('registro.form');
@@ -33,7 +42,15 @@ Route::middleware(['web'])->group(function () {
    // ...
 
 
+});
 
+Route::middleware(['auth'])->group(function () {
+    
+
+
+    Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+    Route::post('/login', [AuthController::class, 'login']);
+    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 });
 
 
@@ -41,3 +58,8 @@ Route::middleware(['web'])->group(function () {
 
 
 
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

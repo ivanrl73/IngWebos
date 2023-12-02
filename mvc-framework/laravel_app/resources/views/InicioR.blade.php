@@ -36,7 +36,7 @@
               <button class="button2" >
                 Registrarse
             </button>
-            <a class="navbar-brand" href="{{asset('Inisesion.php')}}">
+            <a class="navbar-brand" href="{{ asset('Inisesion') }}">
               <button class="button2">
                 Inicia Sesion
             </button>
