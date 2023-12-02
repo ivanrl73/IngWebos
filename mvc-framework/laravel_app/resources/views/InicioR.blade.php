@@ -32,7 +32,7 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="{{ asset('registro.php') }}">
+            <a class="navbar-brand" href="{{ asset('registro') }}">
               <button class="button2" >
                 Registrarse
             </button>

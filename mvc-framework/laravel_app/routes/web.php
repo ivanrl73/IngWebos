@@ -18,14 +18,21 @@ use App\Http\Controllers\RegistroController;
 Route::get('/', function () {
     return view('InicioR');
 });
+Route::get('/registro', function () {
+    return view('registro');
+});
 
 //Posts endpoint
 Route::middleware(['web'])->group(function () {
-    Route::get('/posts', [PostsController::class, 'index']);
-    Route::post('/registrar', [RegistroController::class, 'registrarUsuario']);
-    Route::post('/registro', 'AuthController@registro');
+   Route::get('/registro', [RegistroController::class, 'index'])->name('registro.form');
+   Route::post('/registro', [RegistroController::class, 'registrarUsuario'])->name('registro.submit');
+   Route::post('/registrar', [RegistroController::class, 'registrarUsuario']);
 
-    Route::post('/registro', 'RegistroController@registrarUsuario');
+   
+   Route::get('/posts', [PostsController::class, 'index']);
+   // ...
+
+
 
 });
 

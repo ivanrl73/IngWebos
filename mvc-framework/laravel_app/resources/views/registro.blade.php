@@ -9,8 +9,8 @@
 <body>
     <div class="container">
         <h2>Registro</h2>
-        <form action="/registro" method="post">
-            
+        <form action="{{ route('registro.submit') }}" method="post">
+            @csrf
             <div class="form-group">
                 
                 <label for="nombre">Nombre:</label>
@@ -29,7 +29,7 @@
                 <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirmar Contraseña" required>
             </div>
             <input type="submit" value="Registrarse">
-            @csrf
+            
         </form>
     </div>
 </body>

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Usuario;
+use App\Models\Usuario; // Asegúrate de tener la ruta correcta para el modelo
 use Illuminate\Http\Request;
 
 class RegistroController extends Controller
@@ -11,11 +11,16 @@ class RegistroController extends Controller
     {
         // Validación y creación de usuario
         Usuario::create([
-            'username' => $request->input('nombre'),
+            'nombre' => $request->input('nombre'),
             'correo' => $request->input('email'),
             'contrasena' => bcrypt($request->input('password')),
         ]);
 
         // Otros pasos como redireccionar al inicio de sesión
+    }
+
+    public function index()
+    {
+        return view('registro');
     }
 }
